@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengujian Test</title>
+    <style>
+        /* CSS untuk styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('/static/background.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .button-row {
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        .test-all {
+            display: block;
+            margin-top: 20px;
+        }
+
+        .header-text {
+            font-size: 24px;
+            color: #000;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-text">Program ini akan berjalan selama 30 menit, dimohon untuk tidak menutup laptop, mematikan internet, dan memuat ulang web</div>
+        <div class="button-row">
+            <a href="/speed" class="button">Speed Test</a>
+            <a href="/ping" class="button">Ping Test</a>
+            <a href="/traceroute" class="button">Traceroute</a>
+        </div>
+        <a href="/test_all" class="button test-all">Test Semua</a>
+    </div>
+</body>
+</html>
+
+<script>
+    document.getElementById("speedButton").addEventListener("click", function() {
+        // Mengirim permintaan ke server Flask untuk menjalankan speed.py
+        fetch('/run_speed_test')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data); // Di sini Anda bisa menangani respons dari server jika diperlukan
+            })
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+            });
+    });
+</script>
+
+<script>
+    document.getElementById("pingButton").addEventListener("click", function() {
+        fetch('/run_ping_test')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+                alert('Ping test telah berhasil dijalankan');
+            })
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+                alert('Terjadi kesalahan saat menjalankan ping test');
+            });
+    });
+</script>
+

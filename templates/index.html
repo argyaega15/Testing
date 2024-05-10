@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEGtest</title>
+    <style>
+        /* CSS untuk styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('/static/background.png'); /* Path relatif yang benar */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Menjadikan konten menjadi vertikal */
+        }
+
+        .button {
+            margin-top: 20px; /* Memberikan jarak dari gambar ke tombol */
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        img {
+            max-width: 100%; /* Mencegah gambar melebihi lebar konten */
+            height: auto; /* Mengikuti proporsi asli gambar */
+        }
+    </style>
+</head>
+<body>
+    <!-- Konten HTML -->
+    <img src="/static/logo.png" alt="Logo" width="500" height="500"> <!-- Path relatif yang benar -->
+    <a href="#" id="nextButton" class="button">Selanjutnya</a> <!-- Menambahkan id pada tombol -->
+    
+    <script>
+        // Tambahkan event listener untuk menangani klik pada tombol
+        document.getElementById("nextButton").addEventListener("click", function() {
+            window.location.href = "/test"; // Pindahkan ke halaman test.html saat tombol diklik
+        });
+    </script>
+</body>
+</html>

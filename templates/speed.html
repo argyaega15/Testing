@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Test</title>
+    <style>
+        /* CSS untuk styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .download-button {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Konten HTML -->
+    <div class="container">
+        <h1>Speed Test</h1>
+        <p>
+            Speed test adalah pengukuran kecepatan koneksi internet Anda. Dengan melakukan speed test, Anda dapat mengetahui seberapa cepat atau lambat koneksi internet Anda.
+        </p>
+        <p>
+            Setelah melakukan speed test, Anda dapat mendownload hasil pengukuran untuk referensi Anda.
+        </p>
+        <a href="{{ url_for('hasil_pengukuran_speed', nama_file=nama_file) }}" class="download-button">Download Hasil Speed Test</a> <!-- Ganti 'hasil_speedtest.pdf' dengan nama file hasil pengukuran yang sesuai -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Test</title>
+    <style>
+        /* CSS untuk styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .download-button {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Konten HTML -->
+    <div class="container">
+        <h1>Ping Test</h1>
+        <p>
+            Pingtest adalah salahsatu metode yang digunakan untuk menguji koneksi antara komputer dengan perangkat jaringan. Tujuannya adalah untuk mengukur kecepatan stabilitas koneksi dengan mengirimkan data ke tujuan tertentu dan mengukur waktu yang diperlukan untuk menerima respons balik.
+        </p>
+        <p>
+            Disini kami melakukan PingTest yang ditujukan pada google.com dimana sistem akan mengirimka paket ICMP ke server Google yang dituju, Lalu Anda akan melihat respons yang berisi informasi berupa data Packet Loss, Latency, dan Jitter.
+        </p>
+        <p>
+            <strong>PACKET LOSS</strong> adalah kehilangan paket yang terjadi dalam jaringan komputer ketika paket data yang dikirim dari satu titik ke titik lain tidak tiba di tujuan yang dimaksud. Ketika paket data hilang, informasi yang dikandung dalam paket tersebut tidak sampai ke tujuan, Besarnya packet loss dapat mengakibatkan pengalaman yang buruk.
+        </p>
+        <p>
+            <strong>LATENCY</strong> adalah waktu yang diperlukan untuk mentransfer data dari satu titik ke titik lain dalam jaringan komputer. Ini adalah ukuran waktu yang dibutuhkan oleh sebuah paket data untuk melakukan perjalanan dari sumber ke tujuan, Latensi dinyatakan dalam waktu dan diukur dalam milidetik (ms). Latency memiliki dampak langsung pada kinerja jaringan dan pengalaman pengguna. Latensi yang tinggi dapat menyebabkan penundaan dalam transfer data, yang pada gilirannya dapat mempengaruhi responsivitas aplikasi, kecepatan untuh dan kualitas layanan secara keseluruhan
+        </p>
+        <p>
+            <strong>JITTER</strong> secara sederhana, Jitter bisa dianggap sebagai ketidak konsistenan dalam waktu yang dibutuhkan oleh paket data untuk mencapai tujuan akhirnya. ini bisa disebabkan oleh berbagai faktor seperti variasi dalam beban jaringan, perutean yang berbeda-beda bagi paket-paket yang berbeda dan kondisi fisik jaringan yang berubah ubah, Jitter dapat mempengaruhi kualitas layanan jaringan, terutama dalam aplikasi realtime seperti panggilan suara dan video konferensi.
+        </p>
+        <p>
+            Setelah melakukan ping test, Anda dapat mendownload hasil pengukuran untuk referensi Anda.
+        </p>
+        <a href="hasil_speedtest.pdf" class="download-button">Download Hasil Speed Test</a> <!-- Ganti 'hasil_speedtest.pdf' dengan nama file hasil pengukuran yang sesuai -->
+    </div>
+</body>
+</html>
