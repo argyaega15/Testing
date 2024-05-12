@@ -13,4 +13,4 @@ socket
 datetime
 opnepyxl
 time
-socket
+socket==3.12.3
