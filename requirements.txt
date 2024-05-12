@@ -9,8 +9,6 @@ speedtest-cli
 scapy
 pythonping
 pandas
-socket
 datetime
 opnepyxl
 time
-socket==3.12.3
