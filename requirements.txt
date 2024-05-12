@@ -10,5 +10,5 @@ scapy
 pythonping
 pandas
 datetime
-opnepyxl
+openpyxl
 time
